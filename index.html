@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tebak Hewan 🐾</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 🌤️ Background -->
+  <div class="background">
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div class="sun"></div>
+    <div class="grass"></div>
+  </div>
+
+  <!-- 🏠 Landing Page -->
+  <div class="landing-page">
+    <h1>🐾 Tebak Hewan 🐾</h1>
+    <p>Uji kemampuanmu menebak hewan!</p>
+    <button id="start-btn">🎮 Mulai</button>
+  </div>
+
+  <!-- 🎮 Game Container -->
+  <div class="game-container" style="display:none;">
+    <h1>🐾 Tebak Nama Hewan 🐾</h1>
+    <p id="score">Skor: 0</p>
+
+    <div class="image-box">
+      <img id="animal-img" src="" alt="Hewan" />
+    </div>
+
+    <div id="options" class="options"></div>
+
+    <p id="result" class="result"></p>
+
+    <div class="buttons">
+      <button id="next-btn" disabled>Hewan Selanjutnya ➡️</button>
+      <button id="restart-btn">🔄 Ulangi Dari Awal</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

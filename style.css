@@ -1,0 +1,103 @@
+
+
+
+/* 🌅 Background & Langit */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #87ceeb, #ffffff);
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* ☀️ Matahari */
+.sun {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #fff176, #ffd54f);
+  border-radius: 50%;
+  box-shadow: 0 0 80px 20px rgba(255, 235, 59, 0.5);
+  z-index: 0;
+  animation: sunGlow 5s ease-in-out infinite alternate;
+}
+@keyframes sunGlow {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+/* 🌥️ Awan */
+.cloud {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 40px 25px 80px rgba(255,255,255,0.9), 70px 45px 100px rgba(255,255,255,0.8);
+  opacity: 0.9;
+}
+.cloud1 { width: 180px; height: 90px; top: 80px; left: -250px; animation: moveCloud1 70s linear infinite; }
+.cloud2 { width: 220px; height: 110px; top: 160px; left: -300px; animation: moveCloud2 100s linear infinite; }
+.cloud3 { width: 140px; height: 80px; top: 40px; left: -200px; animation: moveCloud3 85s linear infinite; }
+
+@keyframes moveCloud1 { 0% {transform: translate(0,0);} 50% {transform: translate(120vw,15px);} 100% {transform: translate(240vw,0);} }
+@keyframes moveCloud2 { 0% {transform: translate(0,0);} 50% {transform: translate(120vw,-20px);} 100% {transform: translate(240vw,0);} }
+@keyframes moveCloud3 { 0% {transform: translate(0,0);} 50% {transform: translate(120vw,10px);} 100% {transform: translate(240vw,0);} }
+
+/* 🌿 Rumput bergerak */
+.grass span {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  background: linear-gradient(to top, #2e7d32, #66bb6a);
+  width: 4px;
+  animation-name: sway;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes sway {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Landing Page */
+.landing-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.9);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  z-index: 3;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.landing-page h1 { font-size: 36px; color: #ff7043; margin-bottom: 15px; }
+.landing-page p { font-size: 18px; color: #333; margin-bottom: 20px; }
+#start-btn {
+  font-size: 20px; padding: 12px 25px; background-color: #ffb84d;
+  border: none; border-radius: 12px; cursor: pointer; font-weight: bold;
+  transition: 0.3s;
+}
+#start-btn:hover { background-color: #ffa31a; transform: scale(1.05); }
+
+/* Game Container */
+body { font-family: "Comic Sans MS", sans-serif; margin:0; padding:0; min-height:100vh; text-align:center; display:flex; justify-content:center; align-items:center; }
+.game-container { position: relative; z-index: 2; background: white; border-radius: 20px; padding: 30px; width: 90%; max-width: 400px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+h1 { color: #ff7043; font-size: 28px; }
+#score { color: #333; font-weight: bold; margin-bottom: 10px; }
+.image-box img { width: 200px; height: 200px; object-fit: contain; border-radius: 20px; border: 3px solid #ffcc80; background-color: #fff3e0; padding: 10px; }
+.options { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+button { background-color: #ffb84d; border: none; border-radius: 12px; padding: 12px; font-size: 16px; cursor: pointer; transition: 0.3s; font-weight: bold; }
+button:hover { background-color: #ffa31a; transform: scale(1.05); }
+.result { font-size: 18px; margin-top: 15px; min-height: 24px; }
+.buttons { margin-top: 20px; display: flex; justify-content: space-between; gap: 10px; }
+button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+/* Shake effect */
+@keyframes shake { 0% { transform: translateX(0); } 25% { transform: translateX(-6px); } 50% { transform: translateX(6px); } 75% { transform: translateX(-4px); } 100% { transform: translateX(0); } }
